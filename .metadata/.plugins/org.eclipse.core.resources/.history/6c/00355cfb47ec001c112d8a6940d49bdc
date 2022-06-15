@@ -84,7 +84,7 @@ public class Book {
 		 } while (choice != 9);
 		 in.close();
 	}
-	// add some comment
+	
 	public void addBook(String id, String title, double price) {
 		Scanner in = new Scanner(System.in);
 		
