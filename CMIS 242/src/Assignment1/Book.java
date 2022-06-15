@@ -5,30 +5,18 @@ import java.util.Scanner;
 
 public class Book {
 //attributes
-	private String id;
+	private	int id;
 	private String title; //must allow multiple words
 	private double price;
 	
 	//constructor
-	public Book(String id, String title, double price) {
+	public Book(int id, String title, double price) {
 		this.id = id;
 		this.title = title;
 		this.price = price;
-		
-		/* Not needed in the Book object, only in methods checking for id such as add book */
-		//validate length of id
-		if (id.length() > 5) {
-			System.out.println("Invalid ID length. ID must be 5 digits.");
-			return; //will return back to while loop
-		}
-		//validate type of id
-		if (isInvalidStr(id)) {
-			System.out.println("Invalid ID. ID cannot be empty, null, or blank");
-			return; //will return back to while loop
-		}
 	}
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	//
@@ -46,11 +34,13 @@ public class Book {
 	public class Inventory {
 		//made an array list object with type book
 		//using a generic to specify type
-		private ArrayList<Book> library = new ArrayList<Book>(); 
+		 ArrayList<Book> library = new ArrayList<Book>(); 
 		
 		//add books
 
-	}//create menu
+	}
+	
+	//create menu
 	public void display() {
 		System.out.println("\n    MENU");
 		System.out.println("1: Add book");
@@ -67,19 +57,25 @@ public class Book {
 		 do {
 			 display();
 			 choice = in.nextInt();
+			 Inventory inventory = new Inventory();
 			 
 			 switch(choice) {
-				 
-			 case 1: 
-			
-			 case 2:
-				 
-			 case 3:
-				 
-			 case 4:
-				 
-			 case 9:
+			//add book	 
+			 case 1: inventory.library.add(null); //add correct args later
+			 System.out.println("You have successfully added "); // add book title here
 			 
+			
+			 //reomve book
+			 case 2:
+
+			 //find book by id
+			 case 3:
+			
+			 //display all books
+			 case 4:
+
+			 //case occurs when any input other than 1-4 is given by user
+			 default: System.out.println("Please enter a valid input");
 			 }
 			 
 		 } while (choice != 9);
