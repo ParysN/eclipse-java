@@ -16,7 +16,6 @@ public class Book {
 		this.price = price;
 		
 		//validate length of id
-		//is this repetitive??
 		if (id.length() > 5) {
 			System.out.println("Invalid ID length. ID must be 5 digits.");
 			return; //will return back to while loop
@@ -70,31 +69,28 @@ public class Book {
 			 
 			 switch(choice) {
 				 
-			 case 1: //add book
+			 case 1: 
 			
-			 case 2: //remove book
+			 case 2:
 				 
-			 case 3: //find book
+			 case 3:
 				 
-			 case 4: // display book
+			 case 4:
 				 
-			 case 9: System.out.println();
-			 		 System.out.println("Thank you for using the program. Goodbye! ");
-			 		 System.out.println();
+			 case 9:
 			 
 			 }
 			 
 		 } while (choice != 9);
 		 in.close();
 	}
-	
+	// add some comment
 	public void addBook(String id, String title, double price) {
 		Scanner in = new Scanner(System.in);
 		
 		System.out.println("What is the book ID (5 integers)? ");
 		id = in.nextLine();
 		// should i add if statement to check id?
-		//should i only keep it here and erase the top if statements?
 		if (id.length() > 5) {
 			System.out.println("Invalid ID length. ID must be 5 digits.");
 			//return; //will return back to while loop
