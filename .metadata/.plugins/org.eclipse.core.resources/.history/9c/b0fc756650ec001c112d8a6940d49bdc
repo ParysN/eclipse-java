@@ -69,24 +69,22 @@ public class Book {
 			 
 			 switch(choice) {
 				 
-			 case 1: //add book
+			 case 1: 
 			
-			 case 2: //remove book
+			 case 2:
 				 
-			 case 3: //find book
+			 case 3:
 				 
-			 case 4: // display book
+			 case 4:
 				 
-			 case 9: System.out.println();
-			 		 System.out.println("Thank you for using the program. Goodbye! ");
-			 		 System.out.println();
+			 case 9:
 			 
 			 }
 			 
 		 } while (choice != 9);
 		 in.close();
 	}
-	
+	// add some comment
 	public void addBook(String id, String title, double price) {
 		Scanner in = new Scanner(System.in);
 		
