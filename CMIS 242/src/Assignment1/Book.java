@@ -15,6 +15,7 @@ public class Book {
 		this.title = title;
 		this.price = price;
 		
+		/* Not needed in the Book object, only in methods checking for id such as add book */
 		//validate length of id
 		if (id.length() > 5) {
 			System.out.println("Invalid ID length. ID must be 5 digits.");
