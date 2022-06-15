@@ -1,0 +1,15 @@
+INDEX VERSION 1.131+/Users/parysnewman/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+2172908580.index
+1865797976.index
+2263756861.index
+310771916.index
+3216385495.index
+2922525941.index
+1816963510.index
+1871549704.index
+4135896242.index
+411739550.index
+2561332138.index
+650081389.index
+4146450179.index
+2588629603.index

@@ -1,0 +1,27 @@
+package Assignment1;
+
+public class Book {
+	
+	//attributes
+	private int id;
+	private String title;
+	private double price;
+	
+	//constructor
+	public Book(int id, String title, double price) {
+		this.id = id;
+		this.title = title;
+		this.price = price;
+	}
+	
+	/*public void display() {
+		System.out.print(id + title + price);
+	}*/
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Book b1 = new Book(12345, "Parys", 3.44);
+		System.out.print(b1);
+	}
+
+}
