@@ -16,6 +16,7 @@ public class Book {
 		this.price = price;
 		
 		//validate length of id
+		//is this repetitive??
 		if (id.length() > 5) {
 			System.out.println("Invalid ID length. ID must be 5 digits.");
 			return; //will return back to while loop
@@ -69,15 +70,17 @@ public class Book {
 			 
 			 switch(choice) {
 				 
-			 case 1: 
+			 case 1: //add book
 			
-			 case 2:
+			 case 2: //remove book
 				 
-			 case 3:
+			 case 3: //find book
 				 
-			 case 4:
+			 case 4: // display book
 				 
-			 case 9:
+			 case 9: System.out.println();
+			 		 System.out.println("Thank you for using the program. Goodbye! ");
+			 		 System.out.println();
 			 
 			 }
 			 
@@ -87,11 +90,41 @@ public class Book {
 	
 	public void addBook(String id, String title, double price) {
 		Scanner in = new Scanner(System.in);
+		
 		System.out.println("What is the book ID (5 integers)? ");
+		id = in.nextLine();
+		// should i add if statement to check id?
+		//should i only keep it here and erase the top if statements?
+		if (id.length() > 5) {
+			System.out.println("Invalid ID length. ID must be 5 digits.");
+			//return; //will return back to while loop
+			//validate type of id
+			if (isInvalidStr(id)) {
+			System.out.println("Invalid ID. ID cannot be empty, null, or blank");
+			//return; //will return back to while loop
+			}
+		}
+		
+		System.out.println("What is the book title? ");
+		title = in.nextLine();
+		
+		System.out.println("What is the book price? ");
+		price = in.nextDouble();
+		
+		//how to save this to an array?
+		
+		in.close();
+	}
+	
+	public void removeBook (String id) {
+		Scanner in = new Scanner(System.in);
+		System.out.print("What is book ID? ");
 		id = in.nextLine();
 		
 		in.close();
 	}
+	
+	
 
 
 	//import Scanner.java.util;
