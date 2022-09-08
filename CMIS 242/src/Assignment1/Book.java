@@ -5,29 +5,18 @@ import java.util.Scanner;
 
 public class Book {
 //attributes
-	private String id;
+	private int id;
 	private String title; //must allow multiple words
 	private double price;
 	
 	//constructor
-	public Book(String id, String title, double price) {
+	public Book(int id, String title, double price) {
 		this.id = id;
 		this.title = title;
 		this.price = price;
-		
-		//validate length of id
-		if (id.length() > 5) {
-			System.out.println("Invalid ID length. ID must be 5 digits.");
-			return; //will return back to while loop
-		}
-		//validate type of id
-		if (isInvalidStr(id)) {
-			System.out.println("Invalid ID. ID cannot be empty, null, or blank");
-			return; //will return back to while loop
-		}
 	}
 	
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	//
@@ -45,11 +34,13 @@ public class Book {
 	public class Inventory {
 		//made an array list object with type book
 		//using a generic to specify type
-		private ArrayList<Book> library = new ArrayList<Book>(); 
+		ArrayList<Book> library = new ArrayList<Book>(); 
 		
 		//add books
 
-	}//create menu
+	}
+	
+	//create menu
 	public void display() {
 		System.out.println("\n    MENU");
 		System.out.println("1: Add book");
@@ -80,6 +71,11 @@ public class Book {
 			 case 9: System.out.println();
 			 		 System.out.println("Thank you for using the program. Goodbye! ");
 			 		 System.out.println();
+<<<<<<< HEAD
+=======
+			 		 
+			 default: System.out.println("Invalid input");
+>>>>>>> 9e8ccde56f187fd66cd2323e36f3880d12108c54
 			 
 			 }
 			 
@@ -92,14 +88,15 @@ public class Book {
 		
 		System.out.println("What is the book ID (5 integers)? ");
 		id = in.nextLine();
-		// should i add if statement to check id?
-		if (id.length() > 5) {
+		Inventory.library.add(id);
+		
+		//check length of id
+		int length = String.valueOf(id).length();
+		if (length > 5) {
 			System.out.println("Invalid ID length. ID must be 5 digits.");
-			//return; //will return back to while loop
 			//validate type of id
 			if (isInvalidStr(id)) {
 			System.out.println("Invalid ID. ID cannot be empty, null, or blank");
-			//return; //will return back to while loop
 			}
 		}
 		
@@ -127,8 +124,6 @@ public class Book {
 
 	//import Scanner.java.util;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//Book book = new Book();
 		
 
 	}
